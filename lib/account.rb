@@ -7,11 +7,18 @@ class Account
   end
 
   def deposit(money)
+    raise "You can't add a negative amount love" if negative_deposit?(money)
     @balance += money
   end
 
   def withdrawal(money)
     @balance -= money
+  end
+
+  private
+
+  def negative_deposit?(money)
+    money < 0
   end
 
 end

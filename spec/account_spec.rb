@@ -13,9 +13,8 @@ describe Account do
     expect(account.balance).to eq 1000
   end
 
-  it "Cant' add a negative deposit amount to the account" do
-    account.deposit(-500)
-    expect(account.balance).to raise_error "You can't add a negative amount love"
+  it "Raise an error if try to add a negative deposit amount to the account" do
+    expect { account.deposit(-500) }.to raise_error "You can't add a negative amount love"
   end
 
   it "Can withdrawal money and it deduct it from the account" do
