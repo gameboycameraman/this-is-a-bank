@@ -7,7 +7,7 @@ class Account
   end
 
   def deposit(money)
-    raise "You can't add a negative amount love" if negative_deposit?(money)
+    raise "Sorry love, you can't add a negative amount." if negative_deposit?(money)
     @balance += money
   end
 
