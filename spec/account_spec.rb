@@ -24,6 +24,7 @@ describe Account do
   end
 
   it "Raises and error if try to substract a negative withdrawal amout from the account" do
+    account.deposit(500)
     expect { account.withdrawal(-100) }.to raise_error "Sorry love, you can't withdrawal a negative amount."
   end
 
