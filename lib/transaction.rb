@@ -7,6 +7,4 @@ class Transaction
     @list_withdrawal = []
   end
 
-  
-
 end
